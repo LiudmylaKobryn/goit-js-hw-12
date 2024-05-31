@@ -25,6 +25,7 @@ async function onSearch(event) {
     });
     return;
   }
+  form.reset;
 
   clearGallery();
   currentPage = 1;
@@ -71,7 +72,7 @@ async function onLoadMore() {
       });
       const card = document.querySelector('.gallery-item');
       const cardHeight = card.getBoundingClientRect().height;
-      Window.scrollBy({
+      window.scrollBy({
         left: 0,
         top: cardHeight,
         behavior: 'smooth',
