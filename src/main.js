@@ -69,6 +69,13 @@ async function onLoadMore() {
         title: 'End of Results',
         message: "We're sorry, but you've reached the end of search results.",
       });
+      const card = document.querySelector('.gallery-item');
+      const cardHeight = card.getBoundingClientRect().height;
+      Window.scrollBy({
+        left: 0,
+        top: cardHeight,
+        behavior: 'smooth',
+      });
     }
   } catch (error) {
     iziToast.error({
